@@ -1,0 +1,21 @@
+import sys
+
+N = int(input())
+
+copy_num = 0
+des_num = N
+answer = 0
+
+while copy_num != N:
+    copy_num = 0
+    copy_num += int(des_num / 10)
+    copy_num += int(des_num % 10)
+    copy_num = int(copy_num % 10)
+    copy_num += int(des_num % 10) * 10
+    answer += 1
+    des_num = copy_num
+
+if answer == 0:
+    answer = 1
+
+print(answer)
