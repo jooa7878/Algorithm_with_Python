@@ -1,0 +1,9 @@
+import sys
+
+T = sys.stdin.readline().rstrip()
+
+for i in range(int(T)):
+    s = ""
+    for _ in range(i+1):
+        s += "*"
+    print(s.rjust(int(T)))
