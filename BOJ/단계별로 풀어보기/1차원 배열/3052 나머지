@@ -1,0 +1,13 @@
+import sys
+
+L = []
+answer = 0
+
+for _ in range(10):
+    a = int(sys.stdin.readline().rstrip())
+    b = int(a % 42)
+    if L.count(b) == 0:
+        L.append(b)
+        answer += 1
+
+print(answer)
