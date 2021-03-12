@@ -1,0 +1,15 @@
+A = int(input())
+B = int(input())
+C = int(input())
+
+D = str(A*B*C)
+
+L = [0] * 10
+
+for i in range(len(D)):
+    L[int(D[i])] += 1
+
+for i in range(10):
+    print(L[i])
+    
+# print(D.count(str(i)))이 더 좋음
