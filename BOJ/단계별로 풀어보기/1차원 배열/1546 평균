@@ -1,0 +1,14 @@
+import sys
+
+N = int(input())
+
+L = list(map(int, sys.stdin.readline().rstrip().split()))
+
+a = max(L)
+
+for i in range(N):
+    L[i] = (L[i] / a) * 100
+
+avg = sum(L, 0.0) / len(L)
+
+print(avg)
