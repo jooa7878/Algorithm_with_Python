@@ -1,0 +1,20 @@
+def self_number(a, b: list):
+    s = str(a)
+    if a < 10:
+        L[a*2] = -1
+    elif a < 100:
+        L[a + int(s[0]) + int(s[1])] = -1
+    elif a < 1000:
+        L[a + int(s[0]) + int(s[1]) + int(s[2])] = -1
+    elif a < 10000:
+        L[a + int(s[0]) + int(s[1]) + int(s[2]) + int(s[3])] = -1
+
+
+L = [0] * 20000
+
+for i in range(1, 10001):
+    self_number(i, L)
+
+for i in range(1, 10000):
+    if L[i] != -1:
+        print(i)
