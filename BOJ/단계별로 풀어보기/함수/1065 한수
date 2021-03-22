@@ -1,0 +1,15 @@
+def h_num(a):
+    if a < 100:
+        answer = a
+    else:
+        answer = 99
+        for i in range(100, a+1):
+            s = str(i)
+            if int(s[1]) - int(s[0]) == int(s[2]) - int(s[1]):
+                answer += 1
+    print(answer)
+
+
+N = int(input())
+
+h_num(N)
