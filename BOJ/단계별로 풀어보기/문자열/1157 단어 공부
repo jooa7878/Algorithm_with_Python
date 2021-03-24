@@ -1,0 +1,21 @@
+# a 97 z 122 A 65 Z 90
+
+S = input()
+L = [0] * 26
+
+for i in range(len(S)):
+    if 97 <= ord(S[i]) <= 122:
+        L[ord(S[i])-97] += 1
+    elif 65 <= ord(S[i]) <= 90:
+        L[ord(S[i])-65] += 1
+
+flag = 0
+
+for i in range(len(L)):
+    if L[i] == max(L):
+        flag += 1
+
+if flag == 1:
+    print(chr(L.index(max(L)) + 65))
+else:
+    print("?")
