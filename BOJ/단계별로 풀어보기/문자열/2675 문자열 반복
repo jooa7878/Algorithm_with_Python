@@ -1,0 +1,9 @@
+N = int(input())
+
+for _ in range(N):
+    R, S = input().split()
+    answer = ""
+    for i in range(len(S)):
+        for _ in range(int(R)):
+            answer += S[i]
+    print(answer)
